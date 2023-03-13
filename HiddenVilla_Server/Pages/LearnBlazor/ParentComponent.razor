@@ -1,0 +1,23 @@
+﻿@page "/parentComponent"
+
+<h3 class="text-danger">Parent Component</h3>
+
+<ChildComponent OnClickBtnMethod="ShowMessage" Title="This is passed from the paretn component">
+    <ChildContent> Render fragments from parents Wowow</ChildContent>
+   
+</ChildComponent>
+
+<ChildComponent Title="The is the secodn conponent">
+</ChildComponent>
+
+<p><b>@messageTest</b></p>
+
+@code {
+    private string messageTest = "";
+
+    private void ShowMessage(MouseEventArgs e)
+    {
+        messageTest = "Blazzing meesage from parent";
+    }
+
+}
